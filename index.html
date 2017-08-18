@@ -193,6 +193,18 @@
             </div>
         </div>
 
+        <div class="col-sm-4 portfolio-item">
+            <div class="portfolio-link" href="#debugger" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img class="img-fluid" src="img/portfolio/debugger_400x400.png" alt="">
+            </a>
+        </div>
+    </div>
+
         </div>
       </div>
 
@@ -496,7 +508,41 @@
                             <p>I managed to simulate up to one million particles on the GPU before falling below a framerate of 60 frames per second. I also found that the number of particles scales really well
                               on the GPU.</p>
                             <p>The project was written from scratch in C++, particles were rendered in DirectX 11 and simulated in DirectCompute shaders.</p>
+                            <p>The following is an excerpt of the abstract of the thesis:</p>
+                            <p><i>
+                              Context: Fluid-particle systems are seldom used in games, the apparent performance costs of simulating a fluid-particle system discourages the developer to implement a system of such.
+                              The processing power delivered by a modern GPU enables the developer to implement complex particle systems such as fluid-particle systems.
+                              Writing efficient fluid-particle systems is the key when striving for real-time fluid-particle simulations with good scalability.
+                            </i></p>
+                            <p><i>
+                              Objectives: This thesis ultimately tries to provide the reader with a well-performing and scalable fluid-particle system simulated in real-time using a great number of particles.
+                              The fluid-particle system implements two different fluid physics models for diversity and comparison purposes.
+                              The fluid-particle system will then be measured for each fluid physics model and provide results to educate the reader on how well the performance of a fluid-particle system might
+                                scale with the increase of active particles in the simulation.
+                              Finally, a performance comparison of the particle scalability is made by completely excluding the fluid physics calculations and simulate the particles using only gravity as
+                                an affecting force to be able to demonstrate how taxing the fluid physics calculations are on the GPU.
+                              </i></p>
+                            <p><i>
+                              Methods: The fluid-particle system has been run using different simulation scenarios, where each scenario is defined by the amount of particles
+                              being active and the dimensions of our fluid particle simulation space.
+                              The performance results from each scenario has then been saved and put into a collection of results for a given simulation space.
+                            </i></p>
+                            <p><i>
+                              Results: The results presented demonstrate how well the fluid-particle system actually scales being run on a modern GPU.
+                              The system reached over a million particles while still running at an acceptable frame rate, for both of the fluid physics models.
+                              The results also shows that the performance is greatly reduced by simulating the particle system as a fluid-particle one, instead of only running it with gravity applied.
+                            </i></p>
+                            <p><i>
+                              Conclusions: With the results presented, we are able to conclude that fluid-particle systems scale well with the number of particles being active, while being run on a modern GPU.
+                              There are many optimizations to be done to be able to achieve a well-performing fluid-particle system, when developing fluid-particle system you
+                              should be wary of the many performance pitfalls that comes with it.
+                            </i></p>
+                            <p><i>
+                              Keywords: Fluid-particle system, GPGPU, DirectCompute, fluid physics model
+                            </i></p>
+
                             <p>The source code of this project can be found on my <a href="https://github.com/hyzor/BachelorsThesis">personal GitHub page</a>.</p>
+                            <p>The thesis can be found <a href="https://www.dropbox.com/s/thar5xmasfgd777/BTH2014Hansson%20Falkenby.pdf?dl=0">here</a>.</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="https://www.bth.se/">Blekinge Institute of Technology</a>
@@ -690,7 +736,7 @@
                           <h2>DirectX 12 Test</h2>
                           <hr class="star-primary">
                           <img src="img/portfolio/DirectX12Test_window.PNG" class="img-fluid img-centered" alt="">
-                          <p>Source code can be found on my <a href="https://github.com/hyzor/DirectX12Test">personal GitHub page</a></p>
+                          <p>Source code can be found on my <a href="https://github.com/hyzor/DirectX12Test">personal GitHub page</a>.</p>
                           <ul class="list-inline item-details">
                               <li>Client:
                                   <strong><a href="">None</a>
@@ -712,6 +758,77 @@
           </div>
       </div>
   </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="debugger" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Master's thesis - Debugger</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/debugger.png" class="img-fluid img-centered" alt="">
+
+                        <p>The following is an excerpt from the abstract of the thesis:</p>
+                        <p><i>
+                          Debugging is a fundamental tool for software developers, it is therefore included in the majority of modern integrated development environments available today.
+                          When the capabilities of such debuggers are to be implemented in a debugging tool for a clustered, real-time stream processing system, the task becomes very complex.
+                          Knowledge on how to build debuggers for such systems is missing, and there is a need for these types of tools in the emerging real-time data stream processing industry.
+                         </i></p>
+
+                        <p><i>
+                          This thesis explores ways to implement and find usages of a debugging tool in a clustered, real-time processing environment.
+                          In previous research two papers were of particular interest as to form a basis for this thesis.
+                          However, these papers do not target real-time stream processing systems, so the knowledge gap still persists.
+                          It was found that these types of systems have extended requirements in addition to the functionality debuggers of today that has to be fulfilled.
+                        </i></p>
+
+                        <p><i>
+                          The first requirement found was that shared states has to be represented in some way in the tool, and multiple solutions were proposed.
+                          The second problem found was that the real-time data stream had to be integrated into the tool in one or more ways.
+                          This thesis has brought up two ways to solve it; stream generation and stream sampling.
+                          The last problem brought up came from the need for users to be able to debug fatal bugs that has crashed the system.
+                          Three solutions were proposed, and the concluded Monte Carlo solution builds upon the previous two problems.
+                        </i></p>
+
+                        <p><i>
+                          The thesis presents a special debugging protocol and a blueprint of a debugging tool, with implementation details included, for others to take inspiration from.
+                          Thus it fills in the missing knowledge gap and successfully achieves the goal of answering the question of how to implement a debugging tool for a clustered,
+                          real-time data stream processing system.
+                        </i></p>
+
+                        <p>Source code can be found on my <a href="https://github.com/hyzor/MastersThesis">personal GitHub page</a>.</p>
+
+                        <p>The thesis can be found <a href="https://www.dropbox.com/s/rzvpuv9sytzc17k/Thesis_FINAL_JesperHF.pdf?dl=0">here</a>.</p>
+                        <ul class="list-inline item-details">
+                            <li>Client:
+                                <strong><a href="https://king.com/">King</a>
+                                </strong>
+                            </li>
+                            <li>Date:
+                                <strong><a href="https://king.com/">February 2017</a>
+                                </strong>
+                            </li>
+                            <li>Service:
+                                <strong><a href="https://king.com/">Software Development</a>
+                                </strong>
+                            </li>
+                        </ul>
+                        <button class="btn btn-success" type="button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
     <!-- Bootstrap core JavaScript -->
